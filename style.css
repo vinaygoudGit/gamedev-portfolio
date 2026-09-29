@@ -65,7 +65,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: var(--yellow);
+  background: var(--blue);
   border-bottom: 4px solid var(--ink);
 }
 
@@ -432,4 +432,16 @@ footer {
   .btn {
     transition: none;
   }
+}
+
+.dev-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+  border: 1.5px solid #6b7280;
+  border-radius: 12px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+  text-transform: uppercase;
 }
