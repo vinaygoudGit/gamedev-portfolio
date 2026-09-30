@@ -101,16 +101,15 @@ nav ul a:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px;
 }
-
 .hero {
   padding: 48px 0;
 }
 
 .hero .wrap {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1.2fr 1fr;
   gap: 36px;
-  align-items: center;
+  align-items: start;
 }
 
 .mascot {
@@ -124,6 +123,8 @@ nav ul a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 80px;
 }
 
 .mascot img {
@@ -393,10 +394,13 @@ h3.group .when {
   font-size: 1.1rem;
   max-width: 36rem;
 }
-
+.hero-text h1 {
+  margin-bottom: 1rem;
+}
 .about-text {
   max-width: 44rem;
   font-size: 1.1rem;
+  margin-bottom: 2rem;
 }
 
 .contact-row {
