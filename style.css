@@ -445,3 +445,9 @@ footer {
   vertical-align: middle;
   text-transform: uppercase;
 }
+
+.page-header{padding:56px 0 8px}
+.page-header h1{font-size:clamp(2.6rem,7vw,4.2rem);color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:5px 5px 0 var(--blue)}
+nav ul a.active{text-decoration:underline;text-decoration-thickness:3px}
+.resume-intro{padding-top:8px}
+.resume-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}
