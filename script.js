@@ -1,18 +1,74 @@
-document.querySelectorAll(".video[data-yt]").forEach(function (el) {
-  var id = el.dataset.yt.trim();
-  if (!id) return;
-  var f = document.createElement("iframe");
-  f.src = "https://www.youtube.com/embed/" + encodeURIComponent(id);
-  f.title = el.dataset.title;
-  f.loading = "lazy";
-  f.referrerPolicy = "strict-origin-when-cross-origin";
-  f.allowFullscreen = true;
-  f.allow = "accelerometer; encrypted-media; gyroscope; picture-in-picture";
-  el.appendChild(f);
+document.querySelectorAll(".video[data-gif]").forEach(function (el) {
+  var gifSrc = el.dataset.gif.trim();
+  if (!gifSrc) return;
+
+  var img = document.createElement("img");
+  img.src = gifSrc;
+  img.alt = el.dataset.alt || "Gameplay preview";
+  img.loading = "lazy";
+
+  el.appendChild(img);
+});
+
+var modal = document.getElementById("game-modal");
+var modalIframe = document.getElementById("modal-iframe");
+var modalTitle = document.getElementById("modal-title");
+var modalDesc = document.getElementById("modal-description");
+var modalTech = document.getElementById("modal-mechanics");
+
+function openModal(btn) {
+  if (!modal || !modalIframe) return;
+
+  var ytId = btn.dataset.yt || "";
+  var title = btn.dataset.title || "";
+  var desc = btn.dataset.description || "";
+  var tech = btn.dataset.mechanics || "";
+
+  modalIframe.src = ytId
+    ? "https://www.youtube.com/embed/" +
+      encodeURIComponent(ytId) +
+      "?autoplay=1"
+    : "";
+  if (modalTitle) modalTitle.textContent = title;
+  if (modalDesc) modalDesc.textContent = desc;
+  if (modalTech) modalTech.textContent = tech;
+
+  modal.classList.add("active");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closeModal() {
+  if (!modal || !modalIframe) return;
+  modal.classList.remove("active");
+  modal.setAttribute("aria-hidden", "true");
+  modalIframe.src = "";
+}
+
+document.querySelectorAll(".modal-trigger").forEach(function (card) {
+  card.addEventListener("click", function () {
+    openModal(card);
+  });
+
+  card.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openModal(card);
+    }
+  });
+});
+
+document.querySelectorAll("[data-close]").forEach(function (el) {
+  el.addEventListener("click", closeModal);
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && modal && modal.classList.contains("active")) {
+    closeModal();
+  }
 });
 
 var emailBtn = document.getElementById("email-btn");
-if (emailBtn) {
+if (emailBtn && navigator.clipboard) {
   emailBtn.addEventListener("click", function () {
     navigator.clipboard.writeText("vinayvvv992@gmail.com").then(function () {
       var e = document.getElementById("email-label");

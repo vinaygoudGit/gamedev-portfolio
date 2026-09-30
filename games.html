@@ -1,29 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vinay | Games</title>
-<meta name="description" content="Professional and personal game projects by Vinay.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<nav>
-<div class="wrap">
-<a class="logo" href="index.html#top">Vinay</a>
-<ul>
-<li><a href="index.html">About</a></li><li><a href="games.html" class="active">Games</a></li><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-</nav>
-<main>
-<header class="page-header">
-<div class="wrap"><h1>Games</h1></div>
-</header>
-<section id="professional">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vinay | Games</title>
+    <meta
+      name="description"
+      content="Professional and personal game projects by Vinay."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="game-modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay" tabindex="-1" data-close></div>
+      <div class="modal-container" role="dialog" aria-modal="true">
+        <button class="modal-close" data-close aria-label="Close modal">
+          &times;
+        </button>
+        <div class="modal-video-wrap">
+          <iframe
+            id="modal-iframe"
+            src=""
+            title="Gameplay Video"
+            allowfullscreen
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+          ></iframe>
+        </div>
+        <div class="modal-body">
+          <h2 id="modal-title">Game Title</h2>
+          <p id="modal-description" class="modal-desc"></p>
+          <h3>Mechanics & Technical Highlights</h3>
+          <p id="modal-mechanics" class="modal-tech"></p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="wrap">
+        <a class="logo" href="index.html#top">Vinay</a>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="games.html" class="active">Games</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <header class="page-header">
+        <div class="wrap"><h1>Games</h1></div>
+      </header>
+      <section id="professional">
         <div class="wrap">
           <h2>Professional Work</h2>
 
@@ -161,7 +200,7 @@
           </div>
         </div>
       </section>
-<section id="personal">
+      <section id="personal">
         <div class="wrap">
           <h2>Personal Projects</h2>
           <div class="grid">
@@ -201,21 +240,28 @@
                 >
               </div>
             </article>
-            <article class="card">
+            <article
+              class="card modal-trigger"
+              role="button"
+              tabindex="0"
+              data-yt="dr40m4Xd57s"
+              data-title="Laws of Newton"
+              data-description="A VR educational game that teaches Newton's laws through bowling and tennis, so you feel the physics by doing it."
+              data-mechanics="Built physics-based VR interaction mechanics using XR Interaction Toolkit. Implemented custom parabolic trajectory math for tennis ball serves and dynamic collision force detection for bowling pin scoring."
+            >
               <div
                 class="video"
-                data-yt="dr40m4Xd57s"
-                data-title="Laws of Newton gameplay"
+                data-gif="assets/gifs/laws-of-newton.gif"
+                data-alt="Laws of Newton gameplay preview"
               ></div>
+
               <div class="info">
                 <h3>Laws of Newton</h3>
                 <p>
                   A VR educational game that teaches Newton's laws through
-                  bowling and tennis, so you feel the physics by doing it. Built
-                  in 2025.
+                  bowling and tennis.
                 </p>
                 <ul class="chips">
-                  <!-- <li>Unity</li> -->
                   <li>VR</li>
                   <li>Education</li>
                 </ul>
@@ -284,8 +330,8 @@
           </div>
         </div>
       </section>
-</main>
-<footer>&copy; Vinay. Built with HTML and CSS.</footer>
-<script src="script.js"></script>
-</body>
+    </main>
+    <footer>&copy; Vinay. Built with HTML and CSS.</footer>
+    <script src="script.js"></script>
+  </body>
 </html>
