@@ -1,71 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vinay | Resume</title>
-<meta name="description" content="Vinay's skills and downloadable resume.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<nav>
-<div class="wrap">
-<a class="logo" href="index.html#top">Vinay</a>
-<ul>
-<li><a href="index.html">About</a></li><li><a href="games.html">Games</a></li><li><a href="resume.html" class="active">Resume</a></li><li><a href="contact.html">Contact</a></li>
-</ul>
-</div>
-</nav>
-<main>
-<header class="page-header">
-<div class="wrap"><h1>Resume</h1></div>
-</header>
-<section class="resume-intro">
-<div class="wrap resume-top">
-<a class="btn" href="assets/Vinay_Goud_Resume.pdf" download>Download resume (PDF)</a>
-<p style="margin:0">Or scroll down for the skills breakdown.</p>
-</div>
-</section>
-<section id="skills">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vinay | Resume</title>
+    <meta
+      name="description"
+      content="Vinay's skills, education, languages, personal highlights, and downloadable resume."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fredoka:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .skillgroup-card {
+        background: #fff;
+        padding: 1.25rem;
+        border-radius: 12px;
+        border: 3px solid #000;
+        box-shadow: 4px 4px 0 #000;
+      }
+      .skillgroup-card h3.group {
+        background: #ffd000;
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        border: 2px solid #000;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+      }
+      ul.skills-chips {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      ul.skills-chips li {
+        background: #fff8d6;
+        border: 2px solid #000;
+        padding: 0.25rem 0.6rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 2px 2px 0 #000;
+      }
+      .besides-card {
+        background: #fff;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+        border: 3px solid #000;
+        box-shadow: 4px 4px 0 #000;
+      }
+      .besides-card h3 {
+        margin-top: 0;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="wrap">
+        <a class="logo" href="index.html#top">Vinay</a>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <header class="page-header">
+        <div class="wrap"><h1>Resume</h1></div>
+      </header>
+      <section class="resume-intro">
+        <div class="wrap resume-top">
+          <a class="btn" href="assets/Vinay_Goud_Resume.pdf" download
+            >Download resume (PDF)</a
+          >
+          <p style="margin: 0">
+            Or scroll down for my skills breakdown, education, languages, and
+            personal highlights.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
         <div class="wrap">
           <h2>Skills</h2>
           <div class="skillgroups">
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">Languages</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>C#</li>
               </ul>
             </div>
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">Engines</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>Unity</li>
                 <li>Unreal (Basic)</li>
               </ul>
             </div>
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">Multiplayer</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>Photon Fusion</li>
                 <li>Photon PUN 2</li>
                 <li>Mirror</li>
                 <li>Netcode for GameObjects</li>
               </ul>
             </div>
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">XR / VR / MR</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>XR Interaction Toolkit</li>
                 <li>OpenXR</li>
                 <li>Meta Quest</li>
               </ul>
             </div>
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">Core Concepts</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>Scriptable Objects</li>
                 <li>Service Locator</li>
                 <li>Observer Pattern</li>
@@ -76,28 +138,119 @@
                 <li>Shader Effects</li>
               </ul>
             </div>
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">Platforms</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>Android</li>
                 <li>Windows</li>
                 <li>macOS</li>
                 <li>WebGL</li>
               </ul>
             </div>
-            <div class="skillgroup">
+            <div class="skillgroup-card">
               <h3 class="group">Tools</h3>
-              <ul class="skills">
+              <ul class="skills-chips">
                 <li>Git</li>
                 <li>Firebase</li>
                 <li>AdMob</li>
                 <li>Dotween</li>
+                <li>Cinemachine</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-</main>
-<footer>&copy; Vinay. Built with HTML and CSS.</footer>
-</body>
+
+      <section id="education" style="padding-top: 2rem">
+        <div class="wrap">
+          <h2>Education</h2>
+          <div class="besides-card">
+            <h3
+              style="
+                background: #ffd000;
+                display: inline-block;
+                padding: 0.2rem 0.6rem;
+                border-radius: 6px;
+                border: 2px solid #000;
+                margin-top: 0;
+              "
+            >
+              MSc in Game Technology <span class="when">[2021 – 2023]</span>
+            </h3>
+            <p style="margin-bottom: 0; margin-top: 0.5rem">
+              <strong>ICAT College, Bangalore</strong> (Affiliated with Alagappa
+              University)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="languages" style="padding-top: 2rem">
+        <div class="wrap">
+          <h2>Languages</h2>
+          <div class="skillgroups">
+            <div class="skillgroup-card">
+              <h3 class="group">Telugu</h3>
+              <p style="margin: 0; font-weight: 600">Native</p>
+            </div>
+            <div class="skillgroup-card">
+              <h3 class="group">Hindi</h3>
+              <p style="margin: 0; font-weight: 600">Fluent</p>
+            </div>
+            <div class="skillgroup-card">
+              <h3 class="group">English</h3>
+              <p style="margin: 0; font-weight: 600">Professional</p>
+            </div>
+            <div class="skillgroup-card">
+              <h3 class="group">Japanese</h3>
+              <p style="margin: 0; font-weight: 600">
+                Basic (mostly one-liners)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="besides" style="padding-top: 2rem; padding-bottom: 3rem">
+        <div class="wrap">
+          <h2>Besides...</h2>
+
+          <div class="besides-card">
+            <h3>I 🎮 Video games</h3>
+            <p>
+              Games played a huge part in who I am today. Here are some of my
+              all-time favorites:
+            </p>
+            <p>
+              <strong>Childhood & Inspirations:</strong>
+              <em>GTA: San Andreas</em> (the game that sparked my entire career
+              in gaming), <em>Project I.G.I.</em> series,
+              <em>Max Payne (v1)</em>, <em>EA Cricket 07</em>, and <em>WWE</em>.
+            </p>
+            <p style="margin-bottom: 0">
+              <strong>Multiplayer:</strong> <em>Apex Legends</em> (my most
+              played and favorite competitive shooter).
+            </p>
+          </div>
+
+          <div class="besides-card">
+            <h3>I 📖 Reading Books</h3>
+            <p style="margin-bottom: 0">
+              I mostly read books that feel like a portal to another world,
+              allowing me to dive deep into incredible narratives and lore.
+            </p>
+          </div>
+
+          <div class="besides-card" style="margin-bottom: 0">
+            <h3>I 🎬 Anime & Movies</h3>
+            <p style="margin-bottom: 0">
+              I'm a massive movie lover and anime enthusiast, always drawing
+              creative inspiration from visual storytelling and world-building.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy; Vinay. Built with HTML and CSS.</footer>
+  </body>
 </html>
