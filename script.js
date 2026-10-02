@@ -16,6 +16,28 @@ var modalTitle = document.getElementById("modal-title");
 var modalDesc = document.getElementById("modal-description");
 var modalTech = document.getElementById("modal-mechanics");
 
+function renderMechanics(text) {
+  if (!modalTech) return;
+  modalTech.textContent = "";
+  var items = text
+    .split("|")
+    .map(function (s) {
+      return s.trim();
+    })
+    .filter(Boolean);
+  if (items.length < 2) {
+    modalTech.textContent = text.trim();
+    return;
+  }
+  var ul = document.createElement("ul");
+  items.forEach(function (item) {
+    var li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+  modalTech.appendChild(ul);
+}
+
 function openModal(btn) {
   if (!modal || !modalIframe) return;
 
@@ -31,7 +53,7 @@ function openModal(btn) {
     : "";
   if (modalTitle) modalTitle.textContent = title;
   if (modalDesc) modalDesc.textContent = desc;
-  if (modalTech) modalTech.textContent = tech;
+  renderMechanics(tech);
 
   modal.classList.add("active");
   modal.setAttribute("aria-hidden", "false");
