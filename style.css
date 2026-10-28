@@ -680,31 +680,3 @@ nav ul a.active {
   transform: translate(-2px, -2px);
   box-shadow: 8px 8px 0 var(--ink);
 }
-.card .shot {
-  display: block;
-}
-.card .shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-bottom: 3px solid #111;
-}
-.grid {
-  align-items: start;
-}
-
-.card .shot,
-.card .shot img {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  max-height: none;
-}
-
-.card .shot img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
